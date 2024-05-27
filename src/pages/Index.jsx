@@ -1,18 +1,54 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Heading, Text, VStack, HStack, Link, Spacer, Divider } from "@chakra-ui/react";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" p={0}>
+      {/* Navigation Bar */}
+      <Flex as="nav" bg="gray.800" color="white" p={4} align="center">
+        <Heading size="md">Financial Times</Heading>
+        <Spacer />
+        <HStack spacing={8}>
+          <Link href="#" color="white">Home</Link>
+          <Link href="#" color="white">News</Link>
+          <Link href="#" color="white">Markets</Link>
+          <Link href="#" color="white">Opinion</Link>
+          <Link href="#" color="white">Contact</Link>
+        </HStack>
+      </Flex>
+
+      {/* Main Content */}
+      <Flex direction={{ base: "column", md: "row" }} mt={8}>
+        {/* Main Headline Section */}
+        <Box flex="3" p={4}>
+          <Heading as="h1" size="xl" mb={4}>Main Headline Story</Heading>
+          <Text fontSize="lg">This is the main headline story. It captures the most important news of the day and provides a detailed overview of the event.</Text>
+        </Box>
+
+        {/* Sidebar */}
+        <Box flex="1" bg="gray.100" p={4} mt={{ base: 4, md: 0 }}>
+          <Heading as="h2" size="md" mb={4}>Trending News</Heading>
+          <VStack align="start" spacing={4}>
+            <Text>Trending news item 1</Text>
+            <Text>Trending news item 2</Text>
+            <Text>Trending news item 3</Text>
+            <Text>Trending news item 4</Text>
+          </VStack>
+        </Box>
+      </Flex>
+
+      {/* Footer */}
+      <Box as="footer" bg="gray.800" color="white" mt={8} p={4}>
+        <Flex direction={{ base: "column", md: "row" }} align="center">
+          <Text>&copy; 2023 Financial Times</Text>
+          <Spacer />
+          <HStack spacing={4}>
+            <Link href="#" color="white"><FaFacebook /></Link>
+            <Link href="#" color="white"><FaTwitter /></Link>
+            <Link href="#" color="white"><FaLinkedin /></Link>
+          </HStack>
+        </Flex>
+      </Box>
     </Container>
   );
 };
