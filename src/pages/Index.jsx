@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <Container maxW="container.xl" p={0}>
       {/* Navigation Bar */}
-      <Flex as="nav" bg="gray.800" color="white" p={4} align="center">
+      <Flex as="nav" bg="#fff1e5" color="black" p={4} align="center">
         <Heading size="md">Financial Times</Heading>
         <Spacer />
         <HStack spacing={8}>
@@ -26,7 +26,7 @@ const Index = () => {
         </Box>
 
         {/* Sidebar */}
-        <Box flex="1" bg="gray.100" p={4} mt={{ base: 4, md: 0 }}>
+        <Box flex="1" bg="#f3f2f1" p={4} mt={{ base: 4, md: 0 }}>
           <Heading as="h2" size="md" mb={4}>Trending News</Heading>
           <VStack align="start" spacing={4}>
             <Text>Trending news item 1</Text>
@@ -38,7 +38,7 @@ const Index = () => {
       </Flex>
 
       {/* Footer */}
-      <Box as="footer" bg="gray.800" color="white" mt={8} p={4}>
+      <Box as="footer" bg="#fff1e5" color="black" mt={8} p={4}>
         <Flex direction={{ base: "column", md: "row" }} align="center">
           <Text>&copy; 2023 Financial Times</Text>
           <Spacer />
